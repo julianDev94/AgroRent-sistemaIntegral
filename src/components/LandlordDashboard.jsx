@@ -1,10 +1,16 @@
 import { useState } from 'react';
+import { machineById } from './machinesStore';
 
-const myMachines = [
-  { id: 1, name: 'John Deere S780', type: 'Cosechadora', price: 45000, status: 'disponible', img: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=200&h=140&fit=crop' },
-  { id: 2, name: 'Case IH Magnum 340', type: 'Tractor', price: 32000, status: 'alquilada', img: 'https://images.unsplash.com/photo-1592841200221-a6898f307baa?w=200&h=140&fit=crop' },
-  { id: 3, name: 'Jacto Uniport 3030', type: 'Pulidora', price: 15000, status: 'disponible', img: 'https://images.unsplash.com/photo-1586771107445-d3ca888129ff?w=200&h=140&fit=crop' },
+const MY_MACHINE_STATES = [
+  { machineId: 1, status: 'disponible' },
+  { machineId: 2, status: 'alquilada' },
+  { machineId: 6, status: 'disponible' },
 ];
+
+const myMachines = MY_MACHINE_STATES.map(({ machineId, status }) => ({
+  ...machineById(machineId),
+  status,
+}));
 
 const rentalHistory = [
   { id: 1, machine: 'Case IH Magnum 340', client: 'Juan Pérez', dates: '01/02 - 06/02/2026', status: 'completado', income: 160000, rating: 5 },
