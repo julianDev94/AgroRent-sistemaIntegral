@@ -7,7 +7,7 @@ import InfoBlocks from './InfoBlocks'
 import Faq from './Faq'
 
 export default function LandingPage() {
-  const { hash } = useLocation();
+  const { hash, key } = useLocation();
 
   /* Un <a href="#seccion"> pelado solo busca el id en el documento actual, asi
      que desde /catalogo el clic no hacia nada. Los links del nav apuntan a
@@ -15,7 +15,14 @@ export default function LandingPage() {
      desplazamiento que el navegador no hace en una SPA. */
   useEffect(() => {
     const id = hash.slice(1);
-    if (!id) return;
+    if (!id) {
+      /* Al volver al inicio (link "Inicio", logo o "/") el hash queda vacio.
+         Sin esto la SPA conserva el scroll anterior y parece que el clic no
+         hizo nada. Depende tambien de `key` para que un clic en Inicio estando
+         ya en "/" vuelva arriba igual. */
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
 
     const target = document.getElementById(id);
     if (!target) return;
@@ -36,7 +43,7 @@ export default function LandingPage() {
       frames.forEach(cancelAnimationFrame);
       window.removeEventListener('load', again);
     };
-  }, [hash]);
+  }, [hash, key]);
 
   return (
     <main>

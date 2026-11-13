@@ -913,21 +913,6 @@
   box-shadow: var(--shadow-lg);
 }
 
-.info-blocks__card--security {
-  background: var(--dark-text);
-  border-color: transparent;
-  color: #fff;
-}
-
-.info-blocks__card--security .info-blocks__card-title,
-.info-blocks__card--security .info-blocks__card-desc {
-  color: #fff;
-}
-
-.info-blocks__card--security .info-blocks__card-list li {
-  color: rgba(255, 255, 255, 0.85);
-}
-
 .info-blocks__card-icon-wrap {
   width: 64px;
   height: 64px;
@@ -943,9 +928,6 @@
 }
 .info-blocks__card-icon-wrap--orange {
   background: var(--orange-light);
-}
-.info-blocks__card-icon-wrap--dark {
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .info-blocks__card-title {
@@ -977,10 +959,6 @@
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--gray-text);
-}
-
-.info-blocks__card--security .info-blocks__card-list li svg {
-  fill: var(--orange-cta);
 }
 
 @media (max-width: 768px) {

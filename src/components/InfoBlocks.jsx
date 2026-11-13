@@ -78,8 +78,8 @@ export default function InfoBlocks() {
           </div>
 
           <div className="info-blocks__card info-blocks__card--security">
-            <div className="info-blocks__card-icon-wrap info-blocks__card-icon-wrap--dark">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">
+            <div className="info-blocks__card-icon-wrap info-blocks__card-icon-wrap--green">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#1E6B27" strokeWidth="2">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 <path d="m9 12 2 2 4-4" stroke="#FF8000" strokeWidth="2"/>
               </svg>
