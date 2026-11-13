@@ -3,6 +3,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import { ROLE_LABEL } from './authStore';
 
+const LANDING_URL = 'https://agrorent-landing.netlify.app/';
+
 function initials(nombre) {
   return String(nombre || '?')
     .trim()
@@ -70,6 +72,7 @@ export default function Header() {
           <Link to="/catalogo" className="header__link" onClick={() => setMenuOpen(false)}>Catálogo</Link>
           <Link className="header__link" to="/#como-funciona" onClick={() => setMenuOpen(false)}>Cómo Funciona</Link>
           <Link className="header__link" to="/#faq" onClick={() => setMenuOpen(false)}>Preguntas Frecuentes</Link>
+          <a href={LANDING_URL} className="header__link">Landing presentación</a>
         </nav>
 
         <div className="header__actions">
@@ -168,6 +171,7 @@ export default function Header() {
           <Link className="header__mobile-link" to="/catalogo" onClick={() => setMenuOpen(false)}>Catálogo</Link>
           <Link className="header__mobile-link" to="/#como-funciona" onClick={() => setMenuOpen(false)}>Cómo Funciona</Link>
           <Link className="header__mobile-link" to="/#faq" onClick={() => setMenuOpen(false)}>Preguntas Frecuentes</Link>
+          <a href={LANDING_URL} className="header__mobile-link" onClick={() => setMenuOpen(false)}>Landing presentación</a>
 
           {isAuthenticated ? (
             <div className="header__mobile-user">
