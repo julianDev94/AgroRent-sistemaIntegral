@@ -37,6 +37,7 @@ como `DEMO_ACCOUNTS`, con un botón de autofill en el pie del login.
 
 Datos completos de los usuarios semilla:
 
+
 | Campo | Arrendador | Cliente |
 |---|---|---|
 | `id` | `usr-1` | `usr-2` |

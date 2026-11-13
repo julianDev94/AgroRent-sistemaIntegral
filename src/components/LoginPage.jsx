@@ -186,7 +186,7 @@ export default function LoginPage() {
             </p>
           </form>
 
-          <section className="auth__demo" aria-labelledby="demo-title">
+          {/* <section className="auth__demo" aria-labelledby="demo-title">
             <h2 className="auth__demo-title" id="demo-title">Cuentas de prueba</h2>
             <p className="auth__demo-text">Hacé clic en una para completar el formulario automáticamente.</p>
             <div className="auth__demo-grid">
@@ -200,7 +200,7 @@ export default function LoginPage() {
                 </button>
               ))}
             </div>
-          </section>
+          </section> */}
         </div>
       </main>
     </div>
