@@ -2103,9 +2103,15 @@
 
 .dashboard__panel-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 12px 16px;
   margin-bottom: 20px;
+}
+
+.dashboard__panel-header h2 {
+  margin-bottom: 0;
 }
 
 /* Machine Cards */
